@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heisbayour.netlify.app/sitemap.xml

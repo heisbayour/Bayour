@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayour - Official Site - Nigerian Afrobeats Artist</title>
+  <meta name="description" content="Bayour is a Nigerian artist and Computer Scientist with Bsc.from the Yoruba southwest. Melody-first. Rhythm-obsessed. Feel what he felt.">
+  <meta property="og:title" content="Bayour - Official Site - Nigerian Afrobeats Artist">
+  <meta property="og:description" content="Bayour is a Nigerian Afrobeats and R&B artist from the Yoruba southwest. Melody-first. Rhythm-obsessed. Feel what he felt.">
+  <meta property="og:image" content="https://heisbayour.netlify.app/hero.png">
+  <meta property="og:url" content="https://heisbayour.netlify.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bayour - Official Site - Nigerian Afrobeats Artist">
+  <meta name="twitter:description" content="Bayour is a Nigerian Afrobeats and R&B artist from the Yoruba southwest. Melody-first. Rhythm-obsessed.">
+  <meta name="twitter:image" content="https://heisbayour.netlify.app/hero.png">
+  <meta name="keywords" content="Bayour, Nigerian artist, Afrobeats, R&B, Yoruba, Passion, RTTAF, heisbayour, Nigerian music">
+  <link rel="canonical" href="https://heisbayour.netlify.app">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Bayour",
+    "alternateName": "Ismail Abdulrasheed",
+    "url": "https://heisbayour.netlify.app",
+    "image": "https://heisbayour.netlify.app/hero.png",
+    "description": "Bayour is a Nigerian Afrobeats and R&B artist from the Yoruba southwest, born between Ogbomosho and Ilesa. Melody-first, rhythm-obsessed.",
+    "genre": ["Afrobeats", "R&B", "Afropop"],
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Nigeria"
+    },
+    "sameAs": [
+      "https://open.spotify.com/artist/6YglAf6qbZeAA5oZTpQtjT",
+      "https://music.apple.com/ng/artist/bayour/1573150403",
+      "https://instagram.com/heis_bayour",
+      "https://tiktok.com/@heisbayour",
+      "https://music.youtube.com/channel/UCzcNWM-n6ka5q8wh2g7O_-w"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">BAYOUR</a>
+      <div class="nav-links">
+        <a href="#music">Music</a>
+        <a href="#about">About</a>
+        <a href="#merch">Merch</a>
+        <a href="#connect">Connect</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#music" class="mobile-link">Music</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#merch" class="mobile-link">Merch</a>
+      <a href="#connect" class="mobile-link">Connect</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="hero.png" alt="Bayour" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Official Site</p>
+      <h1 class="hero-name">BAYOUR</h1>
+      <p class="hero-tagline">Feel what he felt.</p>
+      <div class="hero-cta">
+        <a href="#music" class="btn btn-primary">Listen Now</a>
+        <a href="#about" class="btn btn-ghost">His Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- MUSIC / RELEASES -->
+  <section class="section" id="music">
+    <div class="container">
+      <p class="section-eyebrow">Discography</p>
+      <h2 class="section-title">Music</h2>
+
+      <div class="releases-grid" id="releasesGrid">
+
+        <!-- PASSION -->
+        <div class="release-card" data-release="passion">
+          <div class="release-cover">
+            <img src="passion.png" alt="Passion Cover Art" loading="lazy">
+            <div class="release-overlay">
+              <button class="play-btn" onclick="openPlayer('passion')">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="release-info">
+            <span class="release-type">Single · 2025</span>
+            <h3 class="release-title">Passion</h3>
+            <p class="release-sub">feat. Mailjelly</p>
+            <div class="release-links">
+              <a href="https://open.spotify.com/track/1J0ggvhnYHafhsI1sxWP20" target="_blank" class="stream-pill spotify">Spotify</a>
+              <a href="https://music.apple.com/ng/artist/bayour/1573150403" target="_blank" class="stream-pill apple">Apple Music</a>
+              <a href="https://music.youtube.com/channel/UCzcNWM-n6ka5q8wh2g7O_-w" target="_blank" class="stream-pill yt">YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- R.T.T.A.F -->
+        <div class="release-card" data-release="rttaf">
+          <div class="release-cover">
+            <img src="rttaf.png" alt="R.T.T.A.F Cover Art" loading="lazy">
+            <div class="release-overlay">
+              <button class="play-btn" onclick="openPlayer('rttaf')">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="release-info">
+            <span class="release-type">EP · 2024</span>
+            <h3 class="release-title">R.T.T.A.F</h3>
+            <p class="release-sub">3 Tracks</p>
+            <div class="release-tracks">
+              <div class="track-list">
+                <a href="https://open.spotify.com/track/4H0QGH36Sz9ksn17ddpaw5" target="_blank" class="track-item">
+                  <span class="track-num">01</span>
+                  <span class="track-name">Romantic Turned to a Fxckboi</span>
+                  <svg class="track-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </a>
+                <a href="https://open.spotify.com/track/2nQkQqfspAOg6Vilpamwr6" target="_blank" class="track-item">
+                  <span class="track-num">02</span>
+                  <span class="track-name">The One</span>
+                  <svg class="track-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </a>
+                <a href="https://open.spotify.com/track/2mj9RQgTc3vVmb9krAjyM1" target="_blank" class="track-item">
+                  <span class="track-num">03</span>
+                  <span class="track-name">Steadily</span>
+                  <svg class="track-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="release-links">
+              <a href="https://open.spotify.com/album/3LlCe1qTWNFmJe4VaPuHF6" target="_blank" class="stream-pill spotify">Spotify</a>
+              <a href="https://music.apple.com/ng/artist/bayour/1573150403" target="_blank" class="stream-pill apple">Apple Music</a>
+              <a href="https://music.youtube.com/channel/UCzcNWM-n6ka5q8wh2g7O_-w" target="_blank" class="stream-pill yt">YouTube</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYER MODAL -->
+  <div class="player-modal" id="playerModal">
+    <div class="player-modal-inner">
+      <button class="player-close" onclick="closePlayer()">✕</button>
+      <div id="playerEmbed"></div>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closePlayer()"></div>
+
+  <!-- ABOUT -->
+  <section class="section section-dark" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-img-wrap">
+          <img src="hero.png" alt="Bayour" loading="lazy">
+          <div class="about-img-accent"></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">The Story</p>
+        <h2 class="section-title">About</h2>
+        <p class="about-body">
+          Bayour is a Nigerian artist from the heart of Yoruba southwest, born between Ogbomosho and Ilesa and shaped by everything in between. His music lives where sweet melody connects with rhythm and a voice that chases the impossible.
+        <p class="about-body">
+          He didn't start music with a plan. He started with a feeling, the kind that comes from unrequited love, betrayal worn like a second skin, and the quiet loneliness of being someone nobody fully sees. That pain became melody. That melody became Bayour.
+        </p>
+        <p class="about-body">
+          His sound moves between heartbreak, hope and being a loner, between wanting someone and losing them, between God and everything that tests your faith in Him. He makes music the way he feels it, sensational, rhythmic, melody-based, and he wants you to feel exactly what he felt while making it.
+        </p>
+        <div class="about-streaming">
+          <a href="https://open.spotify.com/artist/6YglAf6qbZeAA5oZTpQtjT" target="_blank" class="stream-pill spotify">Spotify</a>
+          <a href="https://music.apple.com/ng/artist/bayour/1573150403" target="_blank" class="stream-pill apple">Apple Music</a>
+          <a href="https://music.youtube.com/channel/UCzcNWM-n6ka5q8wh2g7O_-w" target="_blank" class="stream-pill yt">YouTube Music</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCH -->
+  <section class="section" id="merch">
+    <div class="container merch-container">
+      <p class="section-eyebrow">Store</p>
+      <h2 class="section-title">Merch</h2>
+      <div class="merch-coming">
+        <div class="merch-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 12 C20 12 16 16 16 24 L48 24 C48 16 44 12 44 12 L36 8 C34 14 30 14 28 8 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="14" y="24" width="36" height="32" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Coming Soon</h3>
+        <p>Something worth wearing is on the way. Drop your email to be first to know.</p>
+        <div class="merch-form">
+          <input type="email" id="merchEmail" placeholder="your@email.com" class="merch-input">
+          <button class="btn btn-primary" onclick="submitMerchEmail()">Notify Me</button>
+        </div>
+        <p class="merch-confirm" id="merchConfirm"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section class="section section-dark" id="connect">
+    <div class="container connect-container">
+      <p class="section-eyebrow">Stay Close</p>
+      <h2 class="section-title">Connect</h2>
+      <div class="socials-grid">
+        <a href="https://instagram.com/heis_bayour" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <span>Instagram</span>
+          <small>@heis_bayour</small>
+        </a>
+        <a href="https://tiktok.com/@heisbayour" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.19 8.19 0 004.78 1.52V6.82a4.85 4.85 0 01-1.01-.13z"/></svg>
+          </div>
+          <span>TikTok</span>
+          <small>@heisbayour</small>
+        </a>
+        <a href="https://open.spotify.com/artist/6YglAf6qbZeAA5oZTpQtjT" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          </div>
+          <span>Spotify</span>
+          <small>Stream now</small>
+        </a>
+        <a href="https://music.apple.com/ng/artist/bayour/1573150403" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.064-2.31-2.19-3.032a5.022 5.022 0 00-1.413-.627c-.504-.127-1.022-.19-1.54-.234C17.738.013 16.315 0 12.034 0H11.966C7.685 0 6.262.013 5.414.058c-.518.044-1.036.107-1.54.234a5.022 5.022 0 00-1.413.627C1.335 1.624.588 2.624.27 3.934A9.23 9.23 0 00.03 6.124C-.006 6.97 0 8.392 0 11.966v.068c0 3.574-.006 4.996.03 5.842a9.23 9.23 0 00.24 2.19c.317 1.31 1.064 2.31 2.19 3.032a5.022 5.022 0 001.413.627c.504.127 1.022.19 1.54.234.848.045 2.27.058 6.552.058h.068c4.282 0 5.705-.013 6.552-.058.518-.044 1.036-.107 1.54-.234a5.022 5.022 0 001.413-.627c1.126-.722 1.873-1.722 2.19-3.032a9.23 9.23 0 00.24-2.19c.036-.846.03-2.268.03-5.842v-.068c0-3.574.006-4.996-.03-5.842zM12 18.343a6.343 6.343 0 110-12.686 6.343 6.343 0 010 12.686zm6.595-11.45a1.482 1.482 0 110-2.965 1.482 1.482 0 010 2.965zM12 7.535A4.465 4.465 0 1012 16.464 4.465 4.465 0 0012 7.535z"/></svg>
+          </div>
+          <span>Apple Music</span>
+          <small>Stream now</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">BAYOUR</p>
+      <p class="footer-copy">&copy; <span id="year"></span> Bayour. All rights reserved.</p>
+      <p class="footer-sub">A life of serenity...</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
