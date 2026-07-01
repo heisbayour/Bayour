@@ -43,10 +43,12 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -54,8 +56,9 @@
       <a href="#" class="nav-logo">BAYOUR</a>
       <div class="nav-links">
         <a href="#music">Music</a>
+        <a href="#shows">Shows</a>
+        <a href="#press">Press</a>
         <a href="#about">About</a>
-        <a href="#merch">Merch</a>
         <a href="#connect">Connect</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -64,6 +67,8 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#music" class="mobile-link">Music</a>
+      <a href="#shows" class="mobile-link">Shows</a>
+      <a href="#press" class="mobile-link">Press</a>
       <a href="#about" class="mobile-link">About</a>
       <a href="#merch" class="mobile-link">Merch</a>
       <a href="#connect" class="mobile-link">Connect</a>
@@ -77,8 +82,8 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Official Site</p>
-      <h1 class="hero-name">BAYOUR</h1>
+      <p class="stamp">Official Dossier</p>
+      <h1 class="hero-name"><span class="reveal-line">BAY</span><span class="reveal-line reveal-line-2">OUR</span></h1>
       <p class="hero-tagline">Feel what he felt.</p>
       <div class="hero-cta">
         <a href="#music" class="btn btn-primary">Listen Now</a>
@@ -90,10 +95,36 @@
     </div>
   </section>
 
+  <!-- ACTIVITY STRIP -->
+  <section class="activity-strip">
+    <div class="container activity-inner">
+      <div class="activity-stat">
+        <span class="activity-num">—</span>
+        <span class="activity-label">Listeners / 7d</span>
+      </div>
+      <div class="activity-div"></div>
+      <div class="activity-stat">
+        <span class="activity-num">—</span>
+        <span class="activity-label">Streams / 7d</span>
+      </div>
+      <div class="activity-div"></div>
+      <div class="activity-stat">
+        <span class="activity-num">—</span>
+        <span class="activity-label">Followers</span>
+      </div>
+      <div class="activity-div"></div>
+      <div class="activity-stat activity-stat-latest">
+        <span class="activity-num">Passion</span>
+        <span class="activity-label">Now streaming</span>
+      </div>
+    </div>
+    <p class="activity-footnote">Figures updated manually · not live data</p>
+  </section>
+
   <!-- MUSIC / RELEASES -->
   <section class="section" id="music">
     <div class="container">
-      <p class="section-eyebrow">Discography</p>
+      <p class="stamp">Catalog</p>
       <h2 class="section-title">Music</h2>
 
       <div class="releases-grid" id="releasesGrid">
@@ -103,7 +134,7 @@
           <div class="release-cover">
             <img src="passion.png" alt="Passion Cover Art" loading="lazy">
             <div class="release-overlay">
-              <button class="play-btn" onclick="openPlayer('passion')">
+              <button class="play-btn" onclick="openPlayer('passion')" aria-label="Play Passion">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </button>
             </div>
@@ -125,7 +156,7 @@
           <div class="release-cover">
             <img src="rttaf.png" alt="R.T.T.A.F Cover Art" loading="lazy">
             <div class="release-overlay">
-              <button class="play-btn" onclick="openPlayer('rttaf')">
+              <button class="play-btn" onclick="openPlayer('rttaf')" aria-label="Play R.T.T.A.F">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </button>
             </div>
@@ -168,26 +199,88 @@
   <!-- PLAYER MODAL -->
   <div class="player-modal" id="playerModal">
     <div class="player-modal-inner">
-      <button class="player-close" onclick="closePlayer()">✕</button>
+      <button class="player-close" onclick="closePlayer()" aria-label="Close player">✕</button>
       <div id="playerEmbed"></div>
     </div>
   </div>
   <div class="modal-backdrop" id="modalBackdrop" onclick="closePlayer()"></div>
 
+  <!-- VIDEO -->
+  <section class="section section-dark" id="video">
+    <div class="container">
+      <p class="stamp">Visuals</p>
+      <h2 class="section-title">Video</h2>
+      <div class="video-grid">
+        <a href="https://music.youtube.com/channel/UCzcNWM-n6ka5q8wh2g7O_-w" target="_blank" class="video-featured">
+          <div class="video-play-ring">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-featured-label">Watch on YouTube</span>
+          <span class="video-featured-sub">Official channel — latest uploads</span>
+        </a>
+        <div class="video-slot">
+          <span class="video-slot-tag">Reserved</span>
+          <p>Next video drop lands here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWS -->
+  <section class="section" id="shows">
+    <div class="container">
+      <p class="stamp">On the Road</p>
+      <h2 class="section-title">Shows</h2>
+      <div class="shows-empty">
+        <p class="shows-empty-line">No dates on the board — yet.</p>
+        <p class="shows-empty-sub">First shows are being booked. Get word the moment one's confirmed.</p>
+        <div class="notify-form">
+          <input type="email" id="showsEmail" placeholder="your@email.com" class="notify-input">
+          <button class="btn btn-primary" onclick="submitNotify('showsEmail','showsConfirm','bayour_shows_emails')">Notify Me</button>
+        </div>
+        <p class="notify-confirm" id="showsConfirm"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section class="section section-dark" id="press">
+    <div class="container">
+      <p class="stamp">Coverage</p>
+      <h2 class="section-title">Press</h2>
+      <div class="press-grid">
+        <div class="press-slot">
+          <span class="press-slot-tag">Reserved for press</span>
+          <p>First feature goes here.</p>
+        </div>
+        <div class="press-slot">
+          <span class="press-slot-tag">Reserved for press</span>
+          <p>Second feature goes here.</p>
+        </div>
+        <div class="press-slot">
+          <span class="press-slot-tag">Reserved for press</span>
+          <p>Third feature goes here.</p>
+        </div>
+      </div>
+      <p class="press-note">Journalists &amp; playlisters — reach out via <a href="#connect">Connect</a>.</p>
+    </div>
+  </section>
+
   <!-- ABOUT -->
-  <section class="section section-dark" id="about">
+  <section class="section" id="about">
     <div class="container about-grid">
       <div class="about-visual">
         <div class="about-img-wrap">
           <img src="hero.png" alt="Bayour" loading="lazy">
-          <div class="about-img-accent"></div>
         </div>
+        <p class="about-caption">Ogbomosho ⟶ Ilesa</p>
       </div>
       <div class="about-text">
-        <p class="section-eyebrow">The Story</p>
+        <p class="stamp">The Story</p>
         <h2 class="section-title">About</h2>
         <p class="about-body">
           Bayour is a Nigerian artist from the heart of Yoruba southwest, born between Ogbomosho and Ilesa and shaped by everything in between. His music lives where sweet melody connects with rhythm and a voice that chases the impossible.
+        </p>
         <p class="about-body">
           He didn't start music with a plan. He started with a feeling, the kind that comes from unrequited love, betrayal worn like a second skin, and the quiet loneliness of being someone nobody fully sees. That pain became melody. That melody became Bayour.
         </p>
@@ -204,9 +297,9 @@
   </section>
 
   <!-- MERCH -->
-  <section class="section" id="merch">
+  <section class="section section-dark" id="merch">
     <div class="container merch-container">
-      <p class="section-eyebrow">Store</p>
+      <p class="stamp">Store</p>
       <h2 class="section-title">Merch</h2>
       <div class="merch-coming">
         <div class="merch-icon">
@@ -217,19 +310,19 @@
         </div>
         <h3>Coming Soon</h3>
         <p>Something worth wearing is on the way. Drop your email to be first to know.</p>
-        <div class="merch-form">
-          <input type="email" id="merchEmail" placeholder="your@email.com" class="merch-input">
-          <button class="btn btn-primary" onclick="submitMerchEmail()">Notify Me</button>
+        <div class="notify-form">
+          <input type="email" id="merchEmail" placeholder="your@email.com" class="notify-input">
+          <button class="btn btn-primary" onclick="submitNotify('merchEmail','merchConfirm','bayour_merch_emails')">Notify Me</button>
         </div>
-        <p class="merch-confirm" id="merchConfirm"></p>
+        <p class="notify-confirm" id="merchConfirm"></p>
       </div>
     </div>
   </section>
 
   <!-- CONNECT -->
-  <section class="section section-dark" id="connect">
+  <section class="section" id="connect">
     <div class="container connect-container">
-      <p class="section-eyebrow">Stay Close</p>
+      <p class="stamp">Stay Close</p>
       <h2 class="section-title">Connect</h2>
       <div class="socials-grid">
         <a href="https://instagram.com/heis_bayour" target="_blank" class="social-card">
@@ -275,4 +368,5 @@
 
   <script src="main.js"></script>
 </body>
-</html>
+  </html>
+        
