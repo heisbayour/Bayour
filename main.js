@@ -25,7 +25,6 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('open');
 });
 
-// Close mobile menu on link click
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
@@ -38,10 +37,10 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 
 const releases = {
   passion: {
-    embed: `<iframe style="border-radius:12px;margin-top:2.5rem" src="https://open.spotify.com/embed/track/1J0ggvhnYHafhsI1sxWP20?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
+    embed: `<iframe style="border-radius:4px;margin-top:2.5rem" src="https://open.spotify.com/embed/track/1J0ggvhnYHafhsI1sxWP20?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
   },
   rttaf: {
-    embed: `<iframe style="border-radius:12px;margin-top:2.5rem" src="https://open.spotify.com/embed/album/3LlCe1qTWNFmJe4VaPuHF6?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
+    embed: `<iframe style="border-radius:4px;margin-top:2.5rem" src="https://open.spotify.com/embed/album/3LlCe1qTWNFmJe4VaPuHF6?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
   }
 };
 
@@ -67,13 +66,11 @@ function closePlayer() {
   backdrop.classList.remove('active');
   document.body.style.overflow = '';
 
-  // Destroy embed to stop playback
   setTimeout(() => {
     embed.innerHTML = '';
   }, 300);
 }
 
-// Close on Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePlayer();
 });
@@ -83,7 +80,7 @@ document.addEventListener('keydown', (e) => {
 // =============================================
 
 const revealEls = document.querySelectorAll(
-  '.release-card, .about-grid, .merch-coming, .social-card, .section-title, .section-eyebrow'
+  '.release-card, .about-grid, .merch-coming, .social-card, .section-title, .stamp, .video-featured, .video-slot, .shows-empty, .press-slot'
 );
 
 revealEls.forEach(el => el.classList.add('reveal'));
@@ -103,25 +100,25 @@ const observer = new IntersectionObserver((entries) => {
 revealEls.forEach(el => observer.observe(el));
 
 // =============================================
-// MERCH EMAIL
+// NOTIFY FORMS (merch + shows)
+// Generalized: works for any email-capture block on the page.
 // =============================================
 
-function submitMerchEmail() {
-  const input = document.getElementById('merchEmail');
-  const confirm = document.getElementById('merchConfirm');
+function submitNotify(inputId, confirmId, storageKey) {
+  const input = document.getElementById(inputId);
+  const confirm = document.getElementById(confirmId);
   const email = input.value.trim();
 
   if (!email || !email.includes('@')) {
-    confirm.style.color = '#ff6b6b';
+    confirm.style.color = '#e0665f';
     confirm.textContent = 'Enter a valid email address.';
     return;
   }
 
-  // Store in localStorage for now (replace with backend later)
-  const existing = JSON.parse(localStorage.getItem('bayour_merch_emails') || '[]');
+  const existing = JSON.parse(localStorage.getItem(storageKey) || '[]');
   if (!existing.includes(email)) {
     existing.push(email);
-    localStorage.setItem('bayour_merch_emails', JSON.stringify(existing));
+    localStorage.setItem(storageKey, JSON.stringify(existing));
   }
 
   input.value = '';
@@ -129,7 +126,13 @@ function submitMerchEmail() {
   confirm.textContent = "You're on the list. Watch this space.";
 }
 
-// Allow Enter key on merch input
-document.getElementById('merchEmail').addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') submitMerchEmail();
+['merchEmail', 'showsEmail'].forEach((id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      if (id === 'merchEmail') submitNotify('merchEmail', 'merchConfirm', 'bayour_merch_emails');
+      if (id === 'showsEmail') submitNotify('showsEmail', 'showsConfirm', 'bayour_shows_emails');
+    });
+  }
 });
